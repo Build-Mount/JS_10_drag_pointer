@@ -32,7 +32,7 @@ document.getElementById("topDiv").addEventListener("pointerup", handlePointerUp)
  * 
  * @param {object} event コールバック関数は発生したイベントを説明するEventに基づくオブジェクト。
  */
-function funcMouseDown(event) {
+function handlePointerDown(event) {
     getElemOffset(event);
     document.getElementById(elemId).addEventListener("pointermove", dragWindow);
     document.body.addEventListener("pointerleave", cancelDragWindow);
@@ -44,7 +44,7 @@ function funcMouseDown(event) {
  * 
  * @param {object} event コールバック関数は発生したイベントを説明するEventに基づくオブジェクト。
  */
-function funcMouseUp(event) {
+function handlePointerUp(event) {
     document.getElementById(elemId).removeEventListener("pointermove", dragWindow);
     document.body.removeEventListener("pointerleave", cancelDragWindow);
 }
